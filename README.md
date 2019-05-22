@@ -1,4 +1,7 @@
 # SQL
 
 ## 1. Intro to SQL
-## 2. Joins
+- `SELECT` `FROM
+- `WHERE`
+
+## 2. Joins and Unions 
