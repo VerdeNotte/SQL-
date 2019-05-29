@@ -1,0 +1,54 @@
+# Intermediate SQL
+
+## Case Statements
+
+Case statements are like saying 'if this then that'. It comes in three parts
+
+1. `WHEN` - Tests a given condition, if true - returns after `THEN`
+2. `THEN`
+3. `ELSE` - Ends - returns a specified value if all `WHEN` statements are not true. You use this with `END AS` to define the new variable
+
+## Subqueries
+A subquery is a query nested inside another query.
+You can spot a  query when you see an additional select statement surrounded by ()
+
+Can be in any part of a subquery
+
+Can return a variety of information
+* Scalar quantaties
+* Lists
+* Tables
+
+Subqueries Can
+* Compare groups to summarize values
+* Reshape data to extract and transform
+* Combine data that can't be joined
+
+Simples subqueries are only processed once.
+
+| | | |
+----|----|----|----|
+|`SELECT`|
+|'FROM'|
+|'WHERE'|You can filter data based on a singular scalar values or create a list of values based ona complex set of conditions|
+|`GROUP BY`|
+
+
+### Subqueries in FROM
+
+1. Restructure and transform your data. 2. Additional processing for analysis can change the shape as well as prefilter the data for you.
+
+* You can create multiple subqueries in one 'FROM' statement - give each subquery an alias
+join them
+
+Effective way of answering detailed questions that require filtering or transforming data before including it in your final results
+
+you can join a subquery to any existing |
+but make sure you have a column for the join you want to perform.
+
+
+### Select + subqueries
+* Returns a single values
+ - include aggregate values to compare to individual values
+
+* complex mathematical calculations
