@@ -28,7 +28,7 @@ The `COUNT` statement lets you count all the number of rows in one or more colum
 `SELECT COUNT (*)
 FROM people; `
 
-As you've seen, COUNT( * ) tells you how many rows are in a table. However, if you want to count the number of non-missing values in a particular column, you can call `COUNT` on just that column.
+As you've seen, `COUNT( * )` tells you how many rows are in a table. However, if you want to count the number of non-missing values in a particular column, you can call `COUNT` on just that column.
 
 For example, to count the number of birth dates present in the people table:
 
