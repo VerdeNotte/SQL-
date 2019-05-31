@@ -16,4 +16,10 @@
 |`OR()`| Returns True when any inputs are TRUE|
 |`IF(conditon,yes,no)`|Lets you return a value based on a logical condition|
 |`IFS(condition1, value1, condition2, value2`| extends this to multiple conditions
-|`SWITCH(condition1, catergory1, value1, catergory2, value2)`| Les you transform categorical variables.|
+|`SWITCH(condition1, catergory1, value1, catergory2, value2)`| Les you transform categorical variables|
+|`ROW()`| Returns the row's integer position|
+|`COLUMN()`|Returns the column's|
+|`ADDRESS()`|Returns the address in *a1* format|
+|`INDIRECT()`|Returns the value of an address|
+|`OFFSET()`| Finds a return value relative to another cell|
+|`INDEX()`|Finds values within a cell range|
