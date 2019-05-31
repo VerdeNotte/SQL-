@@ -23,3 +23,6 @@
 |`INDIRECT()`|Returns the value of an address|
 |`OFFSET()`| Finds a return value relative to another cell|
 |`INDEX()`|Finds values within a cell range|
+|`VLOOKUP()| Performs a left join on two datasets|
+|`SORT()`| Programatically sorts data|
+|`MATCH()`|Finds positions in sorted data where a value would occur|
