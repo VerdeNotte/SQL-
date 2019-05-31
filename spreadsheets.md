@@ -173,3 +173,69 @@ Types of errors:
 |#N/A| Missing value|
 |#ERROR!| Syntax problem in a formula|
 |#PARSE|The formula not being formatted correctly|
+
+### Cell Address: 
+There are two ways of specifying a cell address:
+
+A1 = format
+Some functions require us to think about the row and column number
+
+`ROW` as row number (integer)
+`COLUMN` as column number (integer)
+
+`ADDRESS(cell, cell)` `$cell$cell` -Returns an absolute address
+4 different return format
+relative address
+`ADDRESS(cell, cell,4)` `cellcell`
+
+Indirection: 
+A computer science term instead of passing a value to the function, you pass the address.
+
+*Example*
+
+* 25 in cell   a2, 25 is the value
+`ADDRESS` turns it into an absolute address  $A$2
+`INDIRECT` returns it back into the value
+
+Finding nearby cells:
+`OFFSET cell,down, right`
+You can use negative numbers to go to go up or left from the cell.
+0 keeps it at that cell reference
+
+Retrieves the values in cells offset from the current location by a certain number of rows and columns. It takes two arguments: the number of rows down to move from the current location, and the number of columns to move right.
+
+`SUM(OFFSET())` - Combines sum and offset
+`=SUM(OFFSET(A3,  0,  2,  7,  1))`
+
+### Relative Address
+
+If your data set doesn't start at the top left of the spreadsheet it is sometimes easier to specify cells relative to the top left of the data set
+`INDEX(range of data, row, column)`
+range of data should be an absolute address
+
+If you ask for a cell outside of the range it will cause an error.
+
+## Lookup & Matching
+
+#### Left join with VLOOKUP 
+Takes 4 arguments
+Id column with common values
+
+* 1st argument: Value we want to match
+* 2nd argument: Data range usually an absolute address. The first column must contain the lookup values.
+* 3rd argument: Column offset. The column for the value to be merged in 
+* 4th argument: Whether the data is sorted by the lookup column. Usually false
+
+#### Grammatically sorting data
+`=SORT(absolute address range, 2, FALSE)`
+* 1st argument:  range not including the header row
+* 2nd argument:  number of columns to sort by
+* 3rd argument: TRUE sorts in ascending order, FALSE in descending order
+#### Matching values
+
+`=MATCH()`
+Lets you find values in a osrted data set
+Takes 3 arguments
+1. is the value to find
+2. absolute address of the column of data
+3. 1 -descending order, - 1 descending order
