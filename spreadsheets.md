@@ -1,3 +1,32 @@
+# Spreadsheet Basics
+
+* Rows: Horizontal positon, defined by numbers starting at 1
+* Columns: Vertical position, defined with letters
+* Ranges: Rectangular group of cells, defined ranges from top left to the bottom right. A range is defined by two cell addresses, divided by (`:`) The value left of `:` will be the address of the top left cell. The value on the right of `:` will be the bottom right.Ranges don't have to stretch over multiple columns or rows. They can be a single column or row.
+
+### Comparison Operators 
+Here's a full list of all comparison operators:
+
+-   `<`,  `>`: smaller/greater than
+-   `<=`,  `>=`: smaller/greater than or equal to
+-   `=`,  `<>`: equal/not equal to
+
+### Data Types
+
+* text 
+* numbers
+* data
+* currency 
+* logical
+May need to format data type.
+
+###  References
+
+* Reference: A reference lets you refer to another cell value in your workbook. To make a cell reference, use the address to that cell in a formula.
+* Circlular reference: A cell that directly or via a chain of other references refer to itself. 
+* Absolute reference: When you don't want reference to change when you copy of then. Think of it as values that have a fixed location. `= $A$1` You can also absolute reference only rows or columns.
+
+
 # Data Types for Data Science:
 
 The 4 common data types:
@@ -239,3 +268,25 @@ Takes 3 arguments
 1. is the value to find
 2. absolute address of the column of data
 3. 1 -descending order, - 1 descending order
+
+### Filter
+Back to basics (Check)
+
+### Conditional summary statistics
+
+`COUNTIFS()` Let's you pass multiple conditions
+
+Arguments to `COUNTIFS()` come in pairs: a range of values to filter on, best given as absolute addresses, and a condition. The condition is text consisting of
+
+1. Value to match
+2. A comparison operator (=, <. >=. etc) and a number
+
+For example, `COUNTIFS(A2:A100, "DataCamp", B2:B100, ">10")`counts the number of values where column `A`matches `"DataCamp"`  **and** column `B` is greater than `10`
+
+### Imputation
+
+Imputation is used to substitute guesses for missing values. A very simple form of imputation is to substitute the average of the non-missing values for that group. This technique involves 3 steps:
+
+1. `AVERAGEIF()`
+2. `VLOOKUP()`
+3. `ISBLANK()`
