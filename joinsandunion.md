@@ -11,6 +11,10 @@
 ![Joins](https://github.com/VerdeNotte/SQL-/blob/master/Joins.PNG "Joins")
 
  You must match joins on a primary key. All must use `ON` or `HAVING`.
+ 
+ # Anti Joins
+ 
+Anti-join between two tables returns rows from the first table where no matches are found in the second table. It is opposite of a semi-join. An anti-join returns one copy of each row in the first table for which no match is found
 
  ## Self Joins
 This is a query where you join the table onto itself. You can then compare values in a column with the *same column in the same table.*
